@@ -1,4 +1,4 @@
-﻿---
+---
 layout: markdown.hbs
 
 title: learn constantly
@@ -20,6 +20,6 @@ The first step of a successful Agile transformation is to create learning teams.
 | Key practices | Resource allocation, budgeting, prediction, planning. | Shared work execution, team-scale process self-improvement, stakeholder empathy |
 | Emergent results | High coordination costs. Planning efficiency determines product cycles, not customer need. Contention on key skills limits productivity. Morale is low; hiring is expensive. | Low coordination costs. Direction can change at any moment (with both good and bad results). Key skills are always locally available. Morale is high; hiring is less expensive. |
 
-Managers have long claimed that creating learning organizations was a Good Thing. However, no one has ben able to define a systematic approach to creating learning organizations. Those that appear have a business advantage, but seem to get there via luck.
+Managers have long claimed that creating learning organizations was a Good Thing. However, no one has been able to define a systematic approach to creating learning organizations. Those that appear have a business advantage, but seem to get there via luck.
 
 

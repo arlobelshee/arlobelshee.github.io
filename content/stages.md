@@ -1,16 +1,16 @@
-﻿---
+---
 layout: markdown.hbs
 ---
 
 > At a high level, teams transition through a series of stages. These stages are similar from team to team, so can provide you a roadmap to plan and understand your own transitions.
 
-# Attaining Fuency
+# Attaining Fluency
 
-Many leaders and teams mistakenly montior *proficiency*: what your team can do. However, outcomes are determined by *fluent proficiency*: what your team does by habit, on its worst days, when the context works against them. Therefore we encourage teams to maximize fluency at each capability before going on. This will make it easier to learn later capabilities and will also start delivering improved results now.
+Many leaders and teams mistakenly monitor *proficiency*: what your team can do. However, outcomes are determined by *fluent proficiency*: what your team does by habit, on its worst days, when the context works against them. Therefore we encourage teams to maximize fluency at each capability before going on. This will make it easier to learn later capabilities and will also start delivering improved results now.
 
-Furthermore, many tansitions focus on behaviors and actions: what people do. This gives variable results. The problem is that we care about results, not actions. And results are determined primarily by the system; the same action in different systems has different results. We will use performance chain analysis to plan our transition. This lets us tie system changes to changes in results, so that we can adjust the system and measure the right outputs.
+Furthermore, many transitions focus on behaviors and actions: what people do. This gives variable results. The problem is that we care about results, not actions. And results are determined primarily by the system; the same action in different systems has different results. We will use performance chain analysis to plan our transition. This lets us tie system changes to changes in results, so that we can adjust the system and measure the right outputs.
 
-Finally, some transitions are concrete and prescriptive, while others leave a lot of room for adjusting to the context. Both work some of the time. Looking at a large number of transformations, we observe that there are a small number of starting places, a remendous number of intermediate states, and a small number of desired target states. For this reason, our method begins highly prescriptive then quickly broadens to guidance and help choosing your own path, and then finishes rigorously with prescriptive guidance to reach the final stages.
+Finally, some transitions are concrete and prescriptive, while others leave a lot of room for adjusting to the context. Both work some of the time. Looking at a large number of transformations, we observe that there are a small number of starting places, a tremendous number of intermediate states, and a small number of desired target states. For this reason, our method begins highly prescriptive then quickly broadens to guidance and help choosing your own path, and then finishes rigorously with prescriptive guidance to reach the final stages.
 
 ## Fluency
 
@@ -20,9 +20,11 @@ Attaining fluency in new techniques allows my team to change its defaults. Then 
 
 > It's like losing weight
 
-This is much like losing weight by exercising. Many people try to lose weight by going to the gym and lifting weights. They add some special practice that they do when on their besst behavior. Yet even if they manage to make it to the gym regularly, this accounts for only 30 minutes of each day. Their bodies tend to look like they would from the other 23.5 hours of the day.
+This is much like losing weight by exercising. Many people try to lose weight by going to the gym and lifting weights. They add some special practice that they do when on their best behavior. Yet even if they manage to make it to the gym regularly, this accounts for only 30 minutes of each day. Their bodies tend to look like they would from the other 23.5 hours of the day.
 
-Other people instead find some activity they really enjoy. They get into cycling or walking. They integrate it into their day. They commute to work on the bike, buy groceries by bike, sell the car, and go to social events by bike. They never do intensive bike workouts, and yet over time they tend to become healthy. They became fluent cyclists, integrating it into everything they do. It became their default. And so their body reflects the results of cycling all the time, without them paying any attention to losing weight or making it out to a "cycling event."
+Other people instead find some activity they really enjoy. They get into cycling or walking. They integrate it into their day. They commute to work on the bike, buy groceries by bike, sell the car, and go to social events by bike. They never do intensive bike workouts, and yet over time they tend to become healthy.
+
+They became fluent cyclists, integrating it into everything they do. It became their default. And so their body reflects the results of cycling all the time, without them paying any attention to losing weight or making it out to a "cycling event."
 
 We do the same with techniques. We practice each one in detail, integrating it into our daily routine. We ignore theory or special efforts. We focus on the details: what we do day in and day out. Each transition tweaks one or two small techniques. Each takes a day or two to complete. And because each changes our default, we start getting healthy quickly.
 
@@ -42,8 +44,8 @@ Teams see common patterns at all 3 levels.
 
 * Certain techniques are easy to learn by themselves and give immediate results. Others require pre-reqs in order to deliver value. Teams tend to start with the techniques that deliver value, then move on to the ones that those techniques unlock.
  * This optimal order varies slightly from team to team, but not much.
- * There are some alternative techniques&mdash;multiple techniques that give the same result. Differrent teams choose different alternatives. However, they still tend to go through the techniques in the same order, acquiring some technique to give each outcome in the same sequence as other teams do.
-* Each practice has several levels. Each level unifies hundreds of techniques into a single way of working. Teams tend to progress in a uantized fashion. They execute a set of practices at particular levels as they develop fluency in new techniques. Once enough techniques are learned, they rapidly change to a new level of practices. These levels seem to be pretty consistent from team to team.
+ * There are some alternative techniques&mdash;multiple techniques that give the same result. Different teams choose different alternatives. However, they still tend to go through the techniques in the same order, acquiring some technique to give each outcome in the same sequence as other teams do.
+* Each practice has several levels. Each level unifies hundreds of techniques into a single way of working. Teams tend to progress in a quantized fashion. They execute a set of practices at particular levels as they develop fluency in new techniques. Once enough techniques are learned, they rapidly change to a new level of practices. These levels seem to be pretty consistent from team to team.
 * Principles develop as the teams are able to practice that principle. Thus they naturally follow the advancement of levels in practices. As sets of those principles come together, the business fundamentally shifts its way of working. These shifts are similarly quantized and consistent from team to team: each business goes through similar stages in the same order, though how they practice each stage may vary.
 
 It is easiest to understand these patterns from the general to the specific, even though the specific preceeds the general in the real world (practice trumps theory).

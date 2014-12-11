@@ -1,4 +1,4 @@
-﻿---
+---
 layout: markdown.hbs
 
 title: Do your retros provide business value?
@@ -21,7 +21,7 @@ But not everything was rosy. We were spending so much time in meetings. Quality 
 
 This time we found almost no change. Our productivity remained about the same. But things were less frustrating, because of fewer meetings. So we're going to keep working this way. It's better than anything we've done before. We seem to have plateaued. Looks like we've gotten all the value out of Agile. We can probably tweak for a few 5% improvements, but it is time to look for the next big improvement.
 
-Sounds familar? It does to me: this is the most common story of abject failure that I see. As a comparison, these are the baseline measuures I expect as a min-bar to consider an agile transformation successful:
+Sounds familiar? It does to me: this is the most common story of abject failure that I see. As a comparison, these are the baseline measures I expect as a min-bar to consider an agile transformation successful:
 
 
 
@@ -36,12 +36,12 @@ Sounds familar? It does to me: this is the most common story of abject failure t
 
 
 
-These days nearly everyone is doing retros. Yet I still get a lot of calls to help teams improve their release cadence or fix quality problems. These are exaactly the sort of problem that all teams should be able to solve internally: the solutions are well-known and demonstrated to not depend much on local context. Why iis the team stuck?
+These days nearly everyone is doing retros. Yet I still get a lot of calls to help teams improve their release cadence or fix quality problems. These are exactly the sort of problem that all teams should be able to solve internally: the solutions are well-known and demonstrated to not depend much on local context. Why is the team stuck?
 
-Because the retro (as commonly executed) is useless. Retros, as performed by most teams, ddo not give the outcomes needed. Because most teams don't do the retro right. When a team changes how they do retros, they get a different result.
+Because the retro (as commonly executed) is useless. Retros, as performed by most teams, do not give the outcomes needed. Because most teams don't do the retro right. When a team changes how they do retros, they get a different result.
 
 sizzle
-tldr
+tl;dr
 what people do: bitching sessions
 what people do: plan and do actions, not achieve objectives
 Why do retros at all? - what is the problem you are trying to solve

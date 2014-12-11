@@ -32,7 +32,7 @@ Prescriptive guidance. Do the following:
 1. Explicit, temporary relationship contracts with partner teams.
 1. Pause to build fluency.
 1. Prevent bugs. Get to 2-star capabilities in your own way. XP or micro-services are  known ways.
-1. In partner team relationships, focus on reducing the level of interaction reuired to succeed.
+1. In partner team relationships, focus on reducing the level of interaction required to succeed.
 1. Pause to build fluency.
 1. Change your planning process. Rolling wave or continuous flow.
 
@@ -73,5 +73,5 @@ When does this technique apply? When should you consider an alternative? When sh
 ## Discussion of alternatives
 Includes link to a thing about choosing between alternatives.
 
-Pages describing cchoosing between alternatives are really the page about a capability (or set) and the various ways to get it. They need a template too.
+Pages describing choosing between alternatives are really the page about a capability (or set) and the various ways to get it. They need a template too.
 
