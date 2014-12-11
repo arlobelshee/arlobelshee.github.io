@@ -1,0 +1,17 @@
+---
+layout: default.hbs
+---
+
+<!-- Header -->
+<div class="bs-docs-section">
+  <div class="page-header">
+    <h1 id="welcome">Welcome!  {{> popover popover.anchors }}</h1>
+  </div>
+  <p class="lead">{{site.description}}</p>
+  
+{{#markdown}}
+{{> body }}
+{{/markdown}}
+</div>
+
+
