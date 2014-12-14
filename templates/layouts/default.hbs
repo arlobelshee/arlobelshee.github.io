@@ -19,7 +19,12 @@
     {{> belt }}
 
     <div class="container bs-docs-container">
-      {{> body }}
+      <div class="wordcount">
+        <span class="label-wordcount">&nbsp;words</span>,
+        <span class="label-reading-time">&nbsp;to read</span>
+        {{> popover popover.wordcount }}
+        {{> body }}
+      </div>
     </div>
 
     <!-- Footer -->
