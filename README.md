@@ -1,10 +1,10 @@
-# Scale-Out Agile
+# InnovatingTeams  
 
-> Enabling 5,000-person organizations to move with agility.
+> Making the world a better place
 
 ## Getting Started
 
-See the main website at <http://scale-out-agile.github.io/>.
+See the main website at <https://github.com/InnovatingTeams/InnovatingTeams.github.io/>.
 
 ## Contributing
 
@@ -16,13 +16,13 @@ There are three main ways to contribute.
 
 ### How to: describing a problem using an issue
 
-Everything* starts with a problem statement. If you have an idea, we first need to know the problem you are trying to solve. If you are raising an issue for someone else to solve, we need to know the problem. In either case please start by stating the problem.
+Everything<sup>(1)</sup> starts with a problem statement. If you have an idea, we first need to know the problem you are trying to solve. If you are raising an issue for someone else to solve, we need to know the problem. In either case please start by stating the problem.
 
 We describe all problems in the list of open issues. This applies to website bugs, unclear writing, problems with the methodology, or open problems that you are finding when trying to apply the method in the real world. Everything is fair game.
 
 When describing a problem, please be complete. If possible, give examples. You are trying to spur a conversation, so give people something meaty to chew on.
 
-> \* Don't bother using issues for trivial changes. If you see a typo, just fork and send us a pull request. No need for big process and discussion around a trivial change. Use issues when you want the community to discuss the problem and come up with a good answer.
+> (1) Don't bother using issues for trivial changes. If you see a typo, just fork and send us a pull request. No need for big process and discussion around a trivial change. Use issues when you want the community to discuss the problem and come up with a good answer.
 
 ### How to: forking, branching, and writing
 
@@ -57,7 +57,7 @@ Deploy to gh-pages in your fork, and then look online:
 	grunt deploy
 	git push gh_pages
 
-Point your browser at <https://username.github.io/Scale-Out-Agile.github.io/>.
+Point your browser at <https://username.github.io/InnovatingTeams.github.io/>.
 
 Alternatively, you can run a local web server. Serve the _gh_pages folder from your local git repo. The site is just static HTML so any web server can handle it.
 
@@ -79,6 +79,6 @@ This work is licensed under a [![Creative Commons License](https://i.creativecom
 
 Project created by [Arlo Belshee](https://github.com/arlobelshee).
 
-[issues]: https://github.com/Scale-Out-Agile/Scale-Out-Agile.github.io/issues "Current open problems"
-[new-issue]: https://github.com/Scale-Out-Agile/Scale-Out-Agile.github.io/issues/new "Raise a new open problem"
-[fork]: https://github.com/Scale-Out-Agile/Scale-Out-Agile.github.io/fork "Contribute a potential solution to a problem"
+[issues]: https://github.com/InnovatingTeams/InnovatingTeams.github.io/issues "Current open problems"
+[new-issue]: https://github.com/InnovatingTeams/InnovatingTeams.github.io/issues/new "Raise a new open problem"
+[fork]: https://github.com/InnovatingTeams/InnovatingTeams.github.io/fork "Contribute a potential solution to a problem"

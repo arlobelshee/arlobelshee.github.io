@@ -50,7 +50,7 @@ module.exports.register = function (Handlebars, opt, params) {
 			buffer += indent_str + "}";
 		}
 
-		return buffer;
+		return new Handlebars.SafeString(buffer);
 	};
 
 	Handlebars.registerHelper('pretty_print', pretty_print);

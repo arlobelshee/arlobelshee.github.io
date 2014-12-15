@@ -31,7 +31,7 @@ contributors:
 {{/section}}
 {{#section "Core team"}}
 
-Scale-Out Agile is maintained by the founding team, with the massive support and involvement of our community.
+{{project_name}} is maintained by the founding team, with the massive support and involvement of our community.
 
 <div class="list-group bs-team">
 {{#each contributors}}
@@ -41,16 +41,15 @@ Scale-Out Agile is maintained by the founding team, with the massive support and
 {{/each}}
 </div>
 
-Get involved with Scale-Out Agile by <a href="https://github.com/Scale-Out-Agile/Scale-Out-Agile.github.io/issues/new">opening an issue</a> or submitting a pull request.
+Get involved with {{project_name}} by <a href="https://github.com/Scale-Out-Agile/Scale-Out-Agile.github.io/issues/new">opening an issue</a> or submitting a pull request.
 {{/section}}
 {{#section "Community"}}
 
-Stay up to date on the development of Scale-Out Agile and reach out to the community with these helpful resources.
+Stay up to date on the development of {{project_name}} and reach out to the community with these helpful resources.
 
-<!--      <li>Read and subscribe to <a href="http://blog.getbootstrap.com/">The Official Bootstrap Blog</a>.</li> -->
-<!--      <li>Chat with fellow Bootstrappers using IRC in the <code>irc.freenode.net</code> server, in the <a href="irc://irc.freenode.net/#twitter-bootstrap">##twitter-bootstrap channel</a>.</li> -->
-<!--      <li>Find inspiring examples of people building with Bootstrap at the <a href="http://expo.getbootstrap.com">Bootstrap Expo</a>.</li> -->
-* Contribute to the <a href="https://github.com/Scale-Out-Agile/Scale-Out-Agile.github.io/wiki">Scale-Out wiki</a>.
+<!--      <li>Read and subscribe to <a href="http://blog.getbootstrap.com/">The Official {{project_name}} Blog</a>.</li> -->
+<!--      <li>Find inspiring examples of people using {{project_name}} at the <a href="http://expo.getbootstrap.com">Bootstrap Expo</a>.</li> -->
+* Contribute to the <a href="https://github.com/Scale-Out-Agile/Scale-Out-Agile.github.io/wiki">{{project_name}} wiki</a>.
 {{/section}}
 	</div>
 </div>

@@ -35,10 +35,6 @@ components:       <%= site.theme %>/components
 # Project metadata
 # =============================================
 
-# Assemble metadata.
-assemble:
-  latest:         0.4.33  # change to <%= pkg.version %>
-
 # GitHub
 username:         InnovatingTeams
 name:             InnovatingTeams.github.io

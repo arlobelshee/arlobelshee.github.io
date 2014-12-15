@@ -5,6 +5,9 @@ title: Home
 lead: <%= site.lead %>
 ---
 
-# How do we do Agile development with 10,000 people?
+# Welcome to your new site
 
-Large companies are facing an existential crisis today. Agile development methodologies have enabled small teams to work together and exceed the productivity of 100- or 1000-person organizations. App and service marketplaces have enabled small companies to share work, build on each other, and both cooperate and compete to dominate markets that they couldn't target individually. The markets where large companies retain an advantage are shrinking and moving towards commodities or high-end.
+This is just markdown. All the source is in the `content` directory.
+
+1. Write whatever you want. With the usual formatting.
+2. Build the site.

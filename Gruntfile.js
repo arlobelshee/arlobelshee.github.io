@@ -129,10 +129,10 @@ module.exports = function(grunt) {
 	grunt.loadNpmTasks('grunt-contrib-copy');
 	grunt.loadNpmTasks('grunt-contrib-jshint');
 	grunt.loadNpmTasks('grunt-contrib-watch');
-	grunt.loadNpmTasks('grunt-readme');
 	grunt.loadNpmTasks('grunt-sync-pkg');
 	grunt.loadNpmTasks('grunt-git');
 	grunt.loadNpmTasks('grunt-build-control');
+	grunt.loadNpmTasks('grunt-verb');
 	grunt.loadNpmTasks('assemble-less');
 	grunt.loadNpmTasks('assemble');
 
@@ -142,7 +142,7 @@ module.exports = function(grunt) {
 	// or install Bootstrap to the "vendor" directory before running this command.
 	grunt.registerTask('design', ['clean', 'build', 'watch:site']);
 
-	grunt.registerTask('docs', ['readme', 'sync']);
+	grunt.registerTask('docs', ['verb', 'sync']);
 
 	grunt.registerTask('default', ['clean', 'jshint', 'build']);
 
