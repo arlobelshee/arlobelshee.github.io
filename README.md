@@ -1,10 +1,10 @@
-# InnovatingTeams  
+# RawTemplate  
 
-> Making the world a better place
+> Your tagline
 
 ## Getting Started
 
-See the main website at <https://github.com/InnovatingTeams/InnovatingTeams.github.io/>.
+See the main website at <https://github.com/Product/Product.github.io/>.
 
 ## Contributing
 
@@ -57,7 +57,7 @@ Deploy to gh-pages in your fork, and then look online:
 	grunt deploy
 	git push gh_pages
 
-Point your browser at <https://username.github.io/InnovatingTeams.github.io/>.
+Point your browser at <https://username.github.io/Product.github.io/>.
 
 Alternatively, you can run a local web server. Serve the _gh_pages folder from your local git repo. The site is just static HTML so any web server can handle it.
 
@@ -79,6 +79,6 @@ This work is licensed under a [![Creative Commons License](https://i.creativecom
 
 Project created by [Arlo Belshee](https://github.com/arlobelshee).
 
-[issues]: https://github.com/InnovatingTeams/InnovatingTeams.github.io/issues "Current open problems"
-[new-issue]: https://github.com/InnovatingTeams/InnovatingTeams.github.io/issues/new "Raise a new open problem"
-[fork]: https://github.com/InnovatingTeams/InnovatingTeams.github.io/fork "Contribute a potential solution to a problem"
+[issues]: https://github.com/Product/Product.github.io/issues "Current open problems"
+[new-issue]: https://github.com/Product/Product.github.io/issues/new "Raise a new open problem"
+[fork]: https://github.com/Product/Product.github.io/fork "Contribute a potential solution to a problem"

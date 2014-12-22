@@ -36,8 +36,8 @@ components:       <%= site.theme %>/components
 # =============================================
 
 # GitHub
-username:         InnovatingTeams
-name:             InnovatingTeams.github.io
+username:         Product
+name:             Product.github.io
 download:
   source:         <%= pkg.contrib_root %>/archive/master.zip
 
@@ -46,8 +46,8 @@ download:
 # Site metadata
 # =============================================
 
-brand:            Innovating Teams
-title:            Innovating Teams
+brand:            Your brand
+title:            Your title
 lead:             <%= pkg.description %>
 
 version:          <%= pkg.version %>
@@ -87,9 +87,9 @@ disqus:
 # Social
 social:
   twitter:
-    via:          innovatingteams
-    username:     innovatingteams
-    related:      innovatingteams:Company broadcast.
+    via:          youtweet
+    username:     youtweet
+    related:      youtweet:Company broadcast.
   facebook:       true
   linkedin:       true
   gplus:          true
