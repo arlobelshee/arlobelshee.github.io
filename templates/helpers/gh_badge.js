@@ -8,7 +8,7 @@ module.exports.register = function (Handlebars, opt, params) {
 		"</a>"
 	);
 
-	Handlebars.registerHelper('gh_badge', function (options) {
+	Handlebars.registerHelper('gh_badge_helper', function (options) {
 		return new Handlebars.SafeString(template(this, options));
 	});
 };
