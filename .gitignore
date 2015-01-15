@@ -1,23 +1,18 @@
 lib-cov
-*.csv
-*.dat
-*.gz
 *.log
 *.out
 *.pid
 *.rar
 *.seed
 *.sublime-*
-*.zip
 
 pids
 logs
 results
 build
-npm-debug.log
 TODO.md
 
-_gh_pages
+_gh_pages/
 temp
 tmp
 *.user
