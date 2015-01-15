@@ -3,7 +3,7 @@
     "description": "Your tagline",
     "version": "0.1.1",
     "homepage": "http://example.com/",
-    "contrib_root": "https://github.com/Product/Product.github.io/",
+    "contrib_root": "https://github.com/Product/Product.github.io",
     "author": {
         "name": "Arlo Belshee",
         "url": "https://github.com/arlobelshee"

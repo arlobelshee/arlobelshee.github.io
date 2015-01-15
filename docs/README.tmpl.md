@@ -1,10 +1,14 @@
+# Your readme
+
+Edit docs/README.tmpl.md. That is used to generate both the website's readme page and the root directory's README.md.
+
 # {%= name %} {%=  badge("fury") %} {%=  badge("travis") %}
 
 > {%= description %}
 
 ## Getting Started
 
-See the main website at <{%= contrib_root %}>.
+See the main website at <{%= contrib_root %}>/.
 
 ## Contributing
 
