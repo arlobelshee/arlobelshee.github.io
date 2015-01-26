@@ -1,3 +1,7 @@
+# Your readme
+
+Edit docs/README.tmpl.md. That is used to generate both the website's readme page and the root directory's README.md.
+
 # RawTemplate  
 
 > Your tagline
@@ -81,4 +85,4 @@ Project created by [Arlo Belshee](https://github.com/arlobelshee).
 
 [issues]: https://github.com/Product/Product.github.io/issues "Current open problems"
 [new-issue]: https://github.com/Product/Product.github.io/issues/new "Raise a new open problem"
-[fork]: https://github.com/Product/Product.github.io/fork "Contribute a potential solution to a problem"
+[fork]: https://github.com/Product/Product.github.iofork "Contribute a potential solution to a problem"

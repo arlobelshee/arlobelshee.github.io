@@ -8,7 +8,7 @@ Edit docs/README.tmpl.md. That is used to generate both the website's readme pag
 
 ## Getting Started
 
-See the main website at <{%= contrib_root %}>/.
+See the main website at <{%= contrib_root %}/>.
 
 ## Contributing
 
