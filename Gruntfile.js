@@ -19,6 +19,7 @@ module.exports = function(grunt) {
 		vendor: grunt.file.readJSON('.bowerrc').directory,
 		site: grunt.file.readYAML('_config.yml'),
 		bootstrap: '<%= vendor %>/bootstrap',
+		durandal: '<%= vendor %>/durandal',
 
 // Before generating any new files, remove files from previous build.
 		clean: {
@@ -80,11 +81,24 @@ module.exports = function(grunt) {
 		},
 
 		copy: {
-			// Copy Bootstrap's assets to site assets
+			// Copy vendor assets to site assets
 			assets: {
 				files: [
 					{ expand: true, cwd: '<%= bootstrap %>/dist/fonts', src: ['*.*'], dest: '<%= site.assets %>/fonts/' },
 					{ expand: true, cwd: '<%= bootstrap %>/dist/js', src: ['*.*'], dest: '<%= site.assets %>/js/' },
+					{ expand: true, cwd: '<%= durandal %>/js', src: ['*.*'], dest: '<%= site.assets %>/js/durandal/' },
+					{ expand: true, cwd: '<%= durandal %>/img', src: ['*.*'], dest: '<%= site.assets %>/img/' },
+					{ expand: true, cwd: '<%= durandal %>/css', src: ['*.*'], dest: '<%= site.assets %>/css/' },
+					{ expand: true, cwd: '<%= vendor %>/require', src: ['require.js'], dest: '<%= site.assets %>/js/' },
+					{ expand: true, cwd: '<%= vendor %>/jquery/*.min.*', src: ['require.js'], dest: '<%= site.assets %>/js/' },
+				]
+			},
+			// Copy apps to the dest
+			apps: {
+				files: [
+					{ expand: true, cwd: '<%= site.apps %>', src: ['*/app/**/*.*'], dest: '<%= site.assets %>' },
+					{ expand: true, cwd: '<%= site.apps %>', src: ['*/css/*.*'], dest: '<%= site.assets %>' },
+					{ expand: true, cwd: '<%= site.apps %>', src: ['*/*.*'], dest: '<%= site.dest %>' },
 				]
 			},
 			// Copy production core files to dest.
@@ -136,7 +150,7 @@ module.exports = function(grunt) {
 	grunt.loadNpmTasks('assemble-less');
 	grunt.loadNpmTasks('assemble');
 
-	grunt.registerTask('build', ['copy:assets', 'assemble', 'less', 'docs', 'copy:ghpages']);
+	grunt.registerTask('build', ['copy:assets', 'assemble', 'copy:apps', 'less', 'docs', 'copy:ghpages']);
 
 	// Build everything and watch for changes. You must first run "bower install"
 	// or install Bootstrap to the "vendor" directory before running this command.

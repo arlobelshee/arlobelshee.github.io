@@ -15,6 +15,7 @@ includes:         <%= site.templates %>/includes/*.hbs
 layouts:          <%= site.templates %>/layouts
 layout:           default.hbs
 content:          content
+apps:          apps
 
 # Extensions
 helpers:          
