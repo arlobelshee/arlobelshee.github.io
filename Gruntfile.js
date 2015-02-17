@@ -11,7 +11,6 @@
 module.exports = function(grunt) {
 	'use strict';
 
-	// Project configuration.
 	grunt.initConfig({
 
 		// Project metadata
@@ -84,21 +83,24 @@ module.exports = function(grunt) {
 			// Copy vendor assets to site assets
 			assets: {
 				files: [
+					{ expand: true, cwd: '<%= vendor %>/font-awesome/fonts', src: ['*.*'], dest: '<%= site.assets %>/fonts/' },
 					{ expand: true, cwd: '<%= bootstrap %>/dist/fonts', src: ['*.*'], dest: '<%= site.assets %>/fonts/' },
-					{ expand: true, cwd: '<%= bootstrap %>/dist/js', src: ['*.*'], dest: '<%= site.assets %>/js/' },
-					{ expand: true, cwd: '<%= durandal %>/js', src: ['*.*'], dest: '<%= site.assets %>/js/durandal/' },
+					{ expand: true, cwd: '<%= bootstrap %>/dist/js', src: ['*.min.*'], dest: '<%= site.assets %>/js/' },
+					{ expand: true, cwd: '<%= bootstrap %>/dist/css', src: ['*.min.*'], dest: '<%= site.assets %>/css/' },
+					{ expand: true, cwd: '<%= durandal %>/js', src: ['**/*.*'], dest: '<%= site.assets %>/js/durandal/' },
 					{ expand: true, cwd: '<%= durandal %>/img', src: ['*.*'], dest: '<%= site.assets %>/img/' },
-					{ expand: true, cwd: '<%= durandal %>/css', src: ['*.*'], dest: '<%= site.assets %>/css/' },
+					{ expand: true, cwd: '<%= durandal %>/css', src: ['**/*.*'], dest: '<%= site.assets %>/css/' },
 					{ expand: true, cwd: '<%= vendor %>/require', src: ['require.js'], dest: '<%= site.assets %>/js/' },
-					{ expand: true, cwd: '<%= vendor %>/jquery/*.min.*', src: ['require.js'], dest: '<%= site.assets %>/js/' },
+					{ expand: true, cwd: '<%= vendor %>/require', src: ['text.js'], dest: '<%= site.assets %>/js/' },
+					{ expand: true, cwd: '<%= vendor %>/knockout', src: ['knockout-3.1.0.js'], dest: '<%= site.assets %>/js/' },
+					{ expand: true, cwd: '<%= vendor %>/jquery', src: ['*.min.*'], dest: '<%= site.assets %>/js/' },
+					{ expand: true, cwd: '<%= vendor %>/font-awesome/css', src: ['*.min.css'], dest: '<%= site.assets %>/css/' },
 				]
 			},
 			// Copy apps to the dest
 			apps: {
 				files: [
-					{ expand: true, cwd: '<%= site.apps %>', src: ['*/app/**/*.*'], dest: '<%= site.assets %>' },
-					{ expand: true, cwd: '<%= site.apps %>', src: ['*/css/*.*'], dest: '<%= site.assets %>' },
-					{ expand: true, cwd: '<%= site.apps %>', src: ['*/*.*'], dest: '<%= site.dest %>' },
+					{ expand: true, cwd: '<%= site.apps %>', src: ['*/**/*.*'], dest: '<%= site.dest %>' },
 				]
 			},
 			// Copy production core files to dest.

@@ -16,9 +16,9 @@
 
 	<link rel="stylesheet" href="/assets/css/bootstrap.min.css" />
 	<link rel="stylesheet" href="/assets/css/font-awesome.min.css" />
-	<link rel="stylesheet" href="/assets/css/sample/ie10mobile.css" />
+	<link rel="stylesheet" href="css/ie10mobile.css" />
 	<link rel="stylesheet" href="/assets/css/durandal.css" />
-	<link rel="stylesheet" href="/assets/css/sample/samples.css" />
+	<link rel="stylesheet" href="css/samples.css" />
 
 	<script type="text/javascript">
 		if (navigator.userAgent.match(/IEMobile\/10\.0/)) {
@@ -31,6 +31,20 @@
 </head>
 <body>
 	<div id="applicationHost"></div>
-	<script src="/assets/js/require.js" data-main="/assets/js/sample/app/main.js"></script>
+	<script type="text/javascript">
+		var require_app_config = {
+			paths: {
+				'text': '/assets/js/text',
+				'durandal': '/assets/js/durandal',
+				'plugins': '/assets/js/durandal/plugins',
+				'transitions': '/assets/js/durandal/transitions',
+				'knockout': '/assets/js/knockout-3.1.0',
+				'bootstrap': '/assets/js/bootstrap.min',
+				'jquery': '/assets/js/jquery-1.9.1.min'
+			}
+		};
+	</script>
+			<script src="/assets/js/require.js" data-main="app/main.js">
+	</script>
 </body>
 </html>
