@@ -12,13 +12,13 @@
 	};
 	var default_conf = {
 		paths: {
-			'text': '../lib/require/text',
-			'durandal': '../lib/durandal/js',
-			'plugins': '../lib/durandal/js/plugins',
-			'transitions': '../lib/durandal/js/transitions',
-			'knockout': '../lib/knockout/knockout-3.1.0',
-			'bootstrap': '../lib/bootstrap/js/bootstrap',
-			'jquery': '../lib/jquery/jquery-1.9.1'
+			'text': '../../../vendor/require/text',
+			'durandal': '../../../vendor/durandal/js',
+			'plugins': '../../../vendor/durandal/js/plugins',
+			'transitions': '../../../vendor/durandal/js/transitions',
+			'knockout': '../../../vendor/knockout/knockout-3.1.0',
+			'bootstrap': '../../../vendor/bootstrap/js/bootstrap',
+			'jquery': '../../../vendor/jquery/jquery-1.9.1'
 		},
 		shim: {
 			'bootstrap': {
