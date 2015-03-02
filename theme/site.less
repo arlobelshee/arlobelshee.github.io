@@ -17,7 +17,6 @@
 
 // Bootstrap's styles
 @import "bootstrap.less";
-@import (less) "docs.css";
 @import "bootswatch.less";
 
 
@@ -39,6 +38,9 @@
 @import "belt.less";
 @import "toc.less";
 
+// For the examples page so you can see how every component will be styled.
+// Delete once you drop that page.
+@import "examples.less";
 
 // Site-overrides
 // -------------------------------
@@ -63,8 +65,12 @@ pre {
   }
 }
 
+// Subhead needs to start after nav
+body {
+  position: relative; /* For scrollyspy */
+//  padding-top: @navbar-height + @navbar-margin-bottom; /* Account for fixed navbar */
+  padding-top: @navbar-height; /* Account for fixed navbar */
+}
 
 // Utilities must be last
-@import "examples.less";
-@import "responsive-tests.less";
 @import "utilities.less";
