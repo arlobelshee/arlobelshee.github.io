@@ -3,9 +3,12 @@
 // --------------------------------------------------
 
 
+// To pick a different Bootswatch theme, update the include paths in the Gruntfile's less task.
+
 // Theme
 // -------------------------------
 @import "variables.less";
+@import "site_vars.less";
 @import "mixins.less";
 
 
@@ -15,6 +18,7 @@
 // Bootstrap's styles
 @import "bootstrap.less";
 @import (less) "docs.css";
+@import "bootswatch.less";
 
 
 // Components

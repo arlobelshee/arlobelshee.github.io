@@ -68,6 +68,7 @@ module.exports = function(grunt) {
 				vendor: 'vendor',
 				paths: [
 					'<%= site.theme %>',
+					'<%= site.theme %>/paper',
 					'<%= site.theme %>/bootstrap',
 					'<%= site.theme %>/components',
 					'<%= site.theme %>/utils'
