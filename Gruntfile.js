@@ -39,7 +39,7 @@ module.exports = function(grunt) {
 				flatten: true,
 				production: true,
 				assets: '<%= site.assets %>',
-				postprocess: require('pretty'),
+//				postprocess: require('pretty'),
 
 				// Metadata
 				pkg: '<%= pkg %>',
