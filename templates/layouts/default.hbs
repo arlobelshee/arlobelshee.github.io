@@ -1,36 +1,35 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    {{> head }}
-  </head>
-  <body>
-    {{#if production}}
-      {{> tags }} {{! Google Tags. See https://www.google.com/tagmanager/}}
-    {{/if}}
+<head>
+	{{> head }}
+</head>
+<body>
+	{{#if production}}
+	{{> tags }} {{! Google Tags. See https://www.google.com/tagmanager/}}
+	{{/if}}
+	<a class="sr-only" href="#content">Skip to main content</a>
+	<!-- Subhead component -->
+	{{> subhead }}
+	<!-- Navigation component -->
+	{{> nav-main }}
 
-    <a class="sr-only" href="#content">Skip to main content</a>
-    <!-- Navigation component -->
-    {{> nav-main }}
+	<!-- Belt component -->
+	{{> belt }}
 
-    <!-- Subhead component -->
-    {{> subhead }}
+	<!-- Main content -->
+	<div class="container bs-docs-container">
+		<div class="wordcount">
+			<span class="label-wordcount">&nbsp;words</span>,
+			<span class="label-reading-time">&nbsp;to read</span>
+			{{> popover popover.wordcount }}
+			{{> body }}
+		</div>
+	</div>
 
-    <!-- Belt component -->
-    {{> belt }}
+	<!-- Footer -->
+	{{> footer }}
 
-    <div class="container bs-docs-container">
-      <div class="wordcount">
-        <span class="label-wordcount">&nbsp;words</span>,
-        <span class="label-reading-time">&nbsp;to read</span>
-        {{> popover popover.wordcount }}
-        {{> body }}
-      </div>
-    </div>
-
-    <!-- Footer -->
-    {{> footer }}
-
-    <!-- JS and analytics only. -->
-    {{> javascripts }}
-  </body>
+	<!-- JS and analytics only. -->
+	{{> javascripts }}
+</body>
 </html>
