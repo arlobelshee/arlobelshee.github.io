@@ -47,29 +47,32 @@
 
 // Override Bootstrap in favor of GitHub styles
 pre {
-  background: #F8F8FF;
+	background: #F8F8FF;
 }
 
 .btn-popover {
-  .glyphicon-question-sign {
-    margin-left: 5px;
-    font-size: 14px;
-  }
+	.glyphicon-question-sign {
+		margin-left: 5px;
+		font-size: 14px;
+	}
 }
 
 .popover {
-  .glyphicon {
-    font-size: 12px;
-    margin-left: 5px;
-    color: @link-color;
-  }
+	.glyphicon {
+		font-size: 12px;
+		margin-left: 5px;
+		color: @link-color;
+	}
 }
 
 // Subhead needs to start after nav
 body {
-  position: relative; /* For scrollyspy */
-//  padding-top: @navbar-height + @navbar-margin-bottom; /* Account for fixed navbar */
-  padding-top: @navbar-height; /* Account for fixed navbar */
+	position: relative; /* For scrollyspy */
+}
+
+.affix {
+	top: 0;
+	width: 100%;
 }
 
 // Utilities must be last

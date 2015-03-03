@@ -1,22 +1,33 @@
 {{! Load jQuery first }}
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
-
+<script src="{{assets}}/js/jquery-1.9.1.min.js"></script>
 {{! Local scripts }}
 <script src="{{assets}}/js/bootstrap.min.js"></script>
 <script src="{{assets}}/js/highlight.js"></script>
-
 {{! Bootstrap }}
-<script src="http://getbootstrap.com/docs-assets/js/holder.js"></script>
-<script src="http://getbootstrap.com/docs-assets/js/application.js"></script>
-
+<!--<script src="http://getbootstrap.com/docs-assets/js/holder.js"></script>
+<script src="http://getbootstrap.com/docs-assets/js/application.js"></script>-->
 {{#if production}}
 {{! Twitter }}
-<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="https://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+<script>!function (d, s, id) { var js, fjs = d.getElementsByTagName(s)[0]; if (!d.getElementById(id)) { js = d.createElement(s); js.id = id; js.src = "https://platform.twitter.com/widgets.js"; fjs.parentNode.insertBefore(js, fjs); } }(document, "script", "twitter-wjs");</script>
 {{/if}}
-
 <script>
-  $('[data-toggle=popover]').popover({
-    placement: 'right',
-    html: true
-  });
+	$('[data-toggle=popover]').popover({
+		placement: 'right',
+		html: true
+	});
+	$(document).ready(function () {
+		var navbar = $('header.navbar');
+		var initial_height = navbar.height();
+		navbar.affix({
+			offset: {
+				top: navbar.offset().top
+			}
+		});
+		navbar.on('affix.bs.affix', function () {
+			$('body').css('padding-top', initial_height);
+		});
+		navbar.on('affix-top.bs.affix', function () {
+			$('body').css('padding-top', 0);
+		});
+	});
 </script>
