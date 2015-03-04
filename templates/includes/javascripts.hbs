@@ -2,7 +2,7 @@
 <script src="{{assets}}/js/jquery-1.9.1.min.js"></script>
 {{! Local scripts }}
 <script src="{{assets}}/js/bootstrap.min.js"></script>
-<script src="{{assets}}/js/highlight.js"></script>
+<script src="http://cdnjs.cloudflare.com/ajax/libs/highlight.js/8.4/highlight.min.js"></script>
 {{! Bootstrap }}
 <!--<script src="http://getbootstrap.com/docs-assets/js/holder.js"></script>
 <script src="http://getbootstrap.com/docs-assets/js/application.js"></script>-->
@@ -16,18 +16,13 @@
 		html: true
 	});
 	$(document).ready(function () {
-		var navbar = $('header.navbar');
+		var navbar = $('nav.navbar');
 		var initial_height = navbar.height();
 		navbar.affix({
 			offset: {
 				top: navbar.offset().top
 			}
 		});
-		navbar.on('affix.bs.affix', function () {
-			$('body').css('padding-top', initial_height);
-		});
-		navbar.on('affix-top.bs.affix', function () {
-			$('body').css('padding-top', 0);
-		});
+		$('#nav-holder').height(initial_height);
 	});
 </script>

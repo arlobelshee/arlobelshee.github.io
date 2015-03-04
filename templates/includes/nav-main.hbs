@@ -1,18 +1,24 @@
-<header class="navbar navbar-inverse navbar-static-top" role="banner">
-	<div class="container">
-		<div class="navbar-header">
-			<button class="navbar-toggle" type="button" data-toggle="collapse" data-target=".bs-navbar-collapse">
-				<span class="sr-only">Toggle navigation</span>
-			</button>
-			<a href='{{relative page.dest "_gh_pages/index.html"}}' class="navbar-brand">{{default site.title 'Home'}}</a>
-		</div>
-		<nav class="collapse navbar-collapse bs-navbar-collapse" role="navigation">
-			<ul class="nav navbar-nav">
-				<li> <a href='{{relative page.dest "_gh_pages/readme.html"}}'>Readme</a> </li>
-			</ul>
-			<ul class="nav navbar-nav navbar-right">
-				<li> <a href='{{relative page.dest "_gh_pages/about.html"}}'>About</a> </li>
-			</ul>
-		</nav>
-	</div>
+<header id="nav-holder">
+	<nav class="navbar navbar-inverse navbar-static-top">
+		<div class="container-fluid">
+			<div class="navbar-header">
+				<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+					<span class="sr-only">Toggle navigation</span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+				</button>
+				<a href='{{relative page.dest "_gh_pages/index.html"}}' class="navbar-brand">{{default site.title 'Home'}}</a>
+			</div>
+
+			<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+				<ul class="nav navbar-nav">
+					<li><a href='{{relative page.dest "_gh_pages/readme.html"}}'>Readme</a></li>
+				</ul>
+				<ul class="nav navbar-nav navbar-right">
+					<li><a href='{{relative page.dest "_gh_pages/about.html"}}'>About</a></li>
+				</ul>
+			</div>{{! /.navbar-collapse }}
+		</div>{{! /.container-fluid }}
+	</nav>
 </header>
