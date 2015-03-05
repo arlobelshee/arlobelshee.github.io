@@ -4,14 +4,10 @@
 			{{> social-buttons }}
 
 			<p>
-				Made with <a href="https://github.com/assemble/assemble" target="_blank">Assemble</a>
-			</p>
-
-			<p>
-				<a href="{{ site.url.repo }}" target="_blank">{{ site.title }}</a> was created by <a href="https://twitter.com/{{ site.social.twitter.username }}" target="_blank">{{ site.social.twitter.username }}</a>.
+				Made with <a href="https://github.com/assemble/assemble" target="_blank">Assemble</a>. The <a href="{{ site.url.repo }}" target="_blank">{{ site.title }}</a> website was created by <a href="https://twitter.com/{{ site.social.twitter.username }}" target="_blank">{{ site.social.twitter.username }}</a>.
 			</p>
 			<p>
-				Source code released under the <a href="{{ site.license.url }}" target="_blank">{{ site.license.type }}</a> license, documentation under <a href="{{ site.content_license.url }}">{{ site.content_license.type }}</a>.
+				This page Copyright &copy; 2015 Innovating Teams. Source code for building and running the site, not including content, is released under the <a href="{{ site.license.url }}" target="_blank">{{ site.license.type }}</a> license. Content of this page is {{#if proprietary}}proprietary. All rights reserved{{else}}released under the <a href="{{ site.content_license.url }}">{{ site.content_license.type }}</a>{{/if}}. Each page on this site is licensed separately. Please check the footer for licensing requirements if you wish to reuse.
 			</p>
 			<ul class="footer-links">
 				<li>Currently v{{ site.version }}</li>

@@ -8,7 +8,7 @@
  * Licensed under the MIT license.
  */
 
-module.exports = function(grunt) {
+module.exports = function (grunt) {
 	'use strict';
 
 	grunt.initConfig({
@@ -20,12 +20,12 @@ module.exports = function(grunt) {
 		bootstrap: '<%= vendor %>/bootstrap',
 		durandal: '<%= vendor %>/durandal',
 
-// Before generating any new files, remove files from previous build.
+		// Before generating any new files, remove files from previous build.
 		clean: {
-			site: ['<%= site.dest %>/**/*.*', '<%= site.dest %>/**/.*', '!<%= site.dest %>/.git', '<%= site.dest %>/*/*/', '<%= site.dest %>/*/']
+			site: ['<%= site.dest %>/**/*.*', '<%= site.dest %>/**/.*', '!<%= site.dest %>/.git', '<%= site.dest %>/*/']
 		},
 
-// Lint JavaScript
+		// Lint JavaScript
 		jshint: {
 			all: ['Gruntfile.js', 'templates/helpers/*.js'],
 			options: {
@@ -33,13 +33,13 @@ module.exports = function(grunt) {
 			}
 		},
 
-// Build HTML from templates and data
+		// Build HTML from templates and data
 		assemble: {
 			options: {
 				flatten: true,
 				production: true,
 				assets: '<%= site.assets %>',
-//				postprocess: require('pretty'),
+				//				postprocess: require('pretty'),
 
 				// Metadata
 				pkg: '<%= pkg %>',
@@ -62,7 +62,7 @@ module.exports = function(grunt) {
 			}
 		},
 
-// Compile LESS to CSS
+		// Compile LESS to CSS
 		less: {
 			options: {
 				vendor: 'vendor',
@@ -108,7 +108,7 @@ module.exports = function(grunt) {
 			ghpages: {
 				files: [
 					{ src: ['README.md'], dest: '<%= site.dest %>/' },
-					{ expand: true, cwd: 'static', src: ['*.*', '**/*.*'], dest: '<%= site.dest %>/', dot: true }
+					{ expand: true, cwd: 'static', src: ['*.*', '**/*.*', '*'], dest: '<%= site.dest %>/', dot: true }
 				]
 			}
 		},
@@ -129,13 +129,19 @@ module.exports = function(grunt) {
 				dir: '<%= site.dest %>',
 				commit: true,
 				push: true,
-				tag: '<%= pkg.version %>',
 				message: 'Built %sourceName% for production from %sourceCommit%.'
 			},
 			local: {
 				options: {
+					branch: 'gh-pages',
+					remote: 'origin'
+				}
+			},
+			live: {
+				options: {
+					tag: '<%= pkg.version %>',
 					branch: 'master',
-					remote: '../'
+					remote: 'upstream'
 				}
 			}
 		}
@@ -153,15 +159,14 @@ module.exports = function(grunt) {
 	grunt.loadNpmTasks('assemble-less');
 	grunt.loadNpmTasks('assemble');
 
-	grunt.registerTask('build', ['copy:assets', 'assemble', 'copy:apps', 'less', 'docs', 'copy:ghpages']);
+	grunt.registerTask('build', ['copy:assets', 'verb', 'assemble', 'copy:apps', 'less', 'sync', 'copy:ghpages']);
 
 	// Build everything and watch for changes. You must first run "bower install"
 	// or install Bootstrap to the "vendor" directory before running this command.
 	grunt.registerTask('design', ['clean', 'build', 'watch:site']);
 
-	grunt.registerTask('docs', ['verb', 'sync']);
-
 	grunt.registerTask('default', ['clean', 'jshint', 'build']);
 
 	grunt.registerTask('deploy', ['buildcontrol:local']);
+	grunt.registerTask('ship', ['buildcontrol:live']);
 };
