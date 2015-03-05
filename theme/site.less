@@ -45,7 +45,6 @@
 // Site-overrides
 // -------------------------------
 
-// Override Bootstrap in favor of GitHub styles
 pre {
 	background: #F8F8FF;
 }
@@ -65,7 +64,6 @@ pre {
 	}
 }
 
-// Subhead needs to start after nav
 body {
 	position: relative; /* For scrollyspy */
 }
@@ -73,6 +71,14 @@ body {
 .affix {
 	top: 0;
 	width: 100%;
+}
+
+.navbar-nav {
+	@media (min-width: @grid-float-breakpoint) {
+		&.navbar-right:last-child {
+			margin-right: 0;
+		}
+	}
 }
 
 // Utilities must be last
