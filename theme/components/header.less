@@ -7,38 +7,42 @@
 
 /* Page headers */
 .bs-header {
-  padding: 30px 15px 40px; /* side padding builds on .container 15px, so 30px */
-  font-size: 16px;
-  text-align: center;
-  text-shadow: 0 1px 0 rgba(0,0,0,.15);
-  color: #cdbfe3;
-  background-color: @navbar-inverse-bg;
+	padding: 20px 15px 30px; /* side padding builds on .container 15px, so 30px */
+	font-size: 16px;
+	text-align: center;
+	color: lighten(@navbar-inverse-color, 30%);
+	background-color: @navbar-inverse-bg;
 }
+
 .bs-header h1 {
-  color: #fff;
+	color: @navbar-inverse-color;
+	text-shadow: 0 1px 0 lighten(@navbar-inverse-color, 30%);
 }
+
 .bs-header p {
-  font-weight: 300;
-  line-height: 1.5;
+	font-weight: 300;
+	line-height: 1.5;
 }
+
 .bs-header .container {
-  position: relative;
+	position: relative;
 }
 
 @media (min-width: 768px) {
-  .bs-header {
-    font-size: 21px;
-    text-align: left;
-  }
-  .bs-header h1 {
-    font-size: 60px;
-    line-height: 1;
-  }
+	.bs-header {
+		font-size: 21px;
+		text-align: left;
+	}
+
+	.bs-header h1 {
+		font-size: 60px;
+		line-height: 1;
+	}
 }
 
 @media (min-width: 992px) {
-  .bs-header h1,
-  .bs-header p {
-    margin-right: 380px;
-  }
+	.bs-header h1,
+	.bs-header p {
+		margin-right: 380px;
+	}
 }

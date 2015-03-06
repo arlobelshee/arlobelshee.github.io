@@ -68,7 +68,7 @@ module.exports = function (grunt) {
 				vendor: 'vendor',
 				paths: [
 					'<%= site.theme %>',
-					'<%= site.theme %>/paper',
+					'<%= site.theme %>/readable',
 					'<%= site.theme %>/bootstrap',
 					'<%= site.theme %>/components',
 					'<%= site.theme %>/utils'
@@ -124,6 +124,66 @@ module.exports = function (grunt) {
 			}
 		},
 
+		gitcommit: {
+			version_bump: {
+				options: {
+					message: 'Updating version as part of shipping version <%= pkg.version %>.',
+					verbose: true,
+					noStatus: true
+				},
+				files: { src: ['package.json', 'bower.json'] }
+			}
+		},
+
+		gitadd: {
+			version_bump: {
+				options: {
+					verbose: true
+				},
+				files: { src: ['package.json', 'bower.json'] }
+			}
+		},
+
+		gitcheckout: {
+			src: {
+				options: {
+					branch: 'src'
+				}
+			}
+		},
+
+		gitfetch: {
+			upstream: {
+				options: {
+					remote: 'upstream'
+				}
+			}
+		},
+
+		gitmerge: {
+			upstream: {
+				options: {
+					branch: 'upstream/src',
+					ffOnly: true
+				}
+			}
+		},
+
+		gitpush: {
+			upstream: {
+				options: {
+					remote: 'upstream',
+					branch: 'src'
+				}
+			},
+			origin: {
+				options: {
+					remote: 'origin',
+					branch: 'src'
+				}
+			}
+		},
+
 		buildcontrol: {
 			options: {
 				dir: '<%= site.dest %>',
@@ -159,7 +219,15 @@ module.exports = function (grunt) {
 	grunt.loadNpmTasks('assemble-less');
 	grunt.loadNpmTasks('assemble');
 
-	grunt.registerTask('build', ['copy:assets', 'verb', 'assemble', 'copy:apps', 'less', 'sync', 'copy:ghpages']);
+	grunt.registerTask('confirm_ship', 'Ask the user to confirm whether the site is ready to ship.', function () {
+		grunt.log.writeln('');
+		grunt.log.writeln('Please review the site and determine whether it is ready to ship.');
+		grunt.log.writeln('If so, update the version number in package.json using semantic versioning rules.');
+		grunt.log.writeln('When you are done, run grunt ship-go to finish shipping.');
+		grunt.log.writeln('To abandon a ship, simply do nothing.');
+	});
+
+	grunt.registerTask('build', ['copy:assets', 'verb', 'assemble', 'copy:apps', 'less', 'copy:ghpages']);
 
 	// Build everything and watch for changes. You must first run "bower install"
 	// or install Bootstrap to the "vendor" directory before running this command.
@@ -168,5 +236,6 @@ module.exports = function (grunt) {
 	grunt.registerTask('default', ['clean', 'jshint', 'build']);
 
 	grunt.registerTask('deploy', ['buildcontrol:local']);
-	grunt.registerTask('ship', ['buildcontrol:live']);
+	grunt.registerTask('ship-prep', ['gitfetch:upstream', 'gitcheckout:src', 'gitmerge:upstream', 'default', 'confirm_ship']);
+	grunt.registerTask('ship-go', ['sync', 'default', 'gitadd:version_bump', 'gitcommit:version_bump', 'gitpush:upstream', 'gitpush:origin', 'buildcontrol:live']);
 };
