@@ -162,6 +162,7 @@ module.exports = function (grunt) {
 		gitcheckout: {
 			src: {
 				options: {
+					verbose: true,
 					branch: 'src'
 				}
 			}
@@ -170,7 +171,9 @@ module.exports = function (grunt) {
 		gitfetch: {
 			upstream: {
 				options: {
-					remote: 'upstream'
+					verbose: true,
+					prune: true,
+					repository: 'upstream'
 				}
 			}
 		},
@@ -178,6 +181,7 @@ module.exports = function (grunt) {
 		gitmerge: {
 			upstream: {
 				options: {
+					verbose: true,
 					branch: 'upstream/src',
 					ffOnly: true
 				}
@@ -187,12 +191,14 @@ module.exports = function (grunt) {
 		gitpush: {
 			upstream: {
 				options: {
+					verbose: true,
 					remote: 'upstream',
 					branch: 'src'
 				}
 			},
 			origin: {
 				options: {
+					verbose: true,
 					remote: 'origin',
 					branch: 'src'
 				}
@@ -251,6 +257,7 @@ module.exports = function (grunt) {
 	grunt.registerTask('default', ['clean', 'jshint', 'build']);
 
 	grunt.registerTask('deploy', ['buildcontrol:local']);
-	grunt.registerTask('ship-prep', ['gitfetch:upstream', 'gitcheckout:src', 'gitmerge:upstream', 'default', 'confirm_ship']);
+	grunt.registerTask('integrate', ['gitcheckout:src', 'gitfetch:upstream', 'gitmerge:upstream', 'default', 'gitpush:origin']);
+	grunt.registerTask('ship-prep', ['gitcheckout:src', 'gitfetch:upstream', 'gitmerge:upstream', 'default', 'confirm_ship']);
 	grunt.registerTask('ship-go', ['sync', 'default', 'gitadd:version_bump', 'gitcommit:version_bump', 'gitpush:upstream', 'gitpush:origin', 'buildcontrol:live']);
 };
