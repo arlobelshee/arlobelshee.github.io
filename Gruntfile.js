@@ -11,6 +11,19 @@
 module.exports = function (grunt) {
 	'use strict';
 
+	var now = new Date();
+	function print_date(when) {
+		return pad_num(when.getFullYear()) +
+			pad_num(1 + when.getMonth()) +
+			pad_num(when.getDate()) +
+			pad_num(when.getHours()) +
+			pad_num(when.getMinutes()) +
+			pad_num(when.getSeconds());
+	}
+	function pad_num(i) {
+		return (i < 10) ? "0" + i : "" + i;
+	}
+
 	grunt.initConfig({
 
 		// Project metadata
@@ -19,6 +32,7 @@ module.exports = function (grunt) {
 		site: grunt.file.readYAML('_config.yml'),
 		bootstrap: '<%= vendor %>/bootstrap',
 		durandal: '<%= vendor %>/durandal',
+		cache_bust: '<%= pkg.version %>-' + print_date(now),
 
 		// Before generating any new files, remove files from previous build.
 		clean: {
@@ -38,6 +52,7 @@ module.exports = function (grunt) {
 			options: {
 				flatten: true,
 				production: true,
+				cache_bust: '<%= cache_bust %>',
 				assets: '<%= site.assets %>',
 				//				postprocess: require('pretty'),
 
@@ -76,7 +91,7 @@ module.exports = function (grunt) {
 			},
 			site: {
 				src: ['<%= site.theme %>/site.less'],
-				dest: '<%= site.assets %>/css/site.css'
+				dest: '<%= site.assets %>/css/site.<%= cache_bust %>.css'
 			}
 		},
 
