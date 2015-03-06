@@ -30,7 +30,9 @@ When describing a problem, please be complete. If possible, give examples. You a
 
 We work in branches. This makes it easy for people to work on multiple things at once. That's critical because some changes will spawn long discussions. We don't want to block some of your work on a long discussion about an unrelated topic. So create one branch for each improvement you make.
 
-Always create your branch off of the `src` branch. That is the default branch; it's where all the source lives. Periodically fetch any changes to `src` and rebase your branch on top of them.
+Always create your branch off of the `src` branch. That is the default branch; it's where all the source lives. Periodically fetch any changes to `src` and merge them. There is automation for this:
+
+	grunt integrate
 
 ### How to: building the site
 
@@ -76,6 +78,24 @@ Once you have the site looking like you want, push your branch up to github and 
 You will get to provide a description of what you are changing and why. Please include a link to the issue related to your pull request. This makes it a lot easier for the community to track the conversation.
 
 The community will drop by once you have submitted your pull request. We'll hold a discussion on your request's page and on its issue&mdash;as we explore both your solution and the original problem. It is very likely that we'll ask for changes or even fork your fork and send you pull requests. Once everyone agrees about the contribution, we'll pull it into the main project. It will show up on the live site soon thereafter.
+
+### How to: ship to live
+
+First, you need to be in the owners group for the production repository. If you want access, ask Arlo Belshee.
+
+Next, do the one-time setup described above for seeing your changes.
+
+Then:
+
+1. Get all the latest from the main repo and build it locally.
+
+		grunt ship-prep
+
+2. Look at the site. Make sure it is what we want to ship.
+3. Update the version number in `package.json` based on the amount of change in the site. Use semantic versioning rules to decide the new version.
+4. Perform the ship to live using the automation.
+
+		grunt ship-go
 
 ## License
 
