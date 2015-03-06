@@ -36,7 +36,7 @@ module.exports = function (grunt) {
 
 		// Before generating any new files, remove files from previous build.
 		clean: {
-			site: ['<%= site.dest %>/**/*.*', '<%= site.dest %>/**/.*', '!<%= site.dest %>/.git', '<%= site.dest %>/*/']
+			site: ['<%= site.dest %>/**/.*', '<%= site.dest %>/**/*', '!<%= site.dest %>/.git']
 		},
 
 		// Lint JavaScript
@@ -113,17 +113,20 @@ module.exports = function (grunt) {
 					{ expand: true, cwd: '<%= vendor %>/font-awesome/css', src: ['*.min.css'], dest: '<%= site.assets %>/css/' },
 				]
 			},
-			// Copy apps to the dest
 			apps: {
 				files: [
 					{ expand: true, cwd: '<%= site.apps %>', src: ['*/**/*.*'], dest: '<%= site.dest %>' },
 				]
 			},
-			// Copy production core files to dest.
 			ghpages: {
 				files: [
 					{ src: ['README.md'], dest: '<%= site.dest %>/' },
 					{ expand: true, cwd: 'static', src: ['*.*', '**/*.*', '*'], dest: '<%= site.dest %>/', dot: true }
+				]
+			},
+			production_only: {
+				files: [
+					{ expand: true, cwd: 'static_production_only', src: ['*.*', '**/*.*', '*'], dest: '<%= site.dest %>/', dot: true }
 				]
 			}
 		},
@@ -210,7 +213,7 @@ module.exports = function (grunt) {
 				dir: '<%= site.dest %>',
 				commit: true,
 				push: true,
-				message: 'Built %sourceName% for production from %sourceCommit%.'
+				message: 'Built %sourceName% <%= pkg.version %> from %sourceCommit%.'
 			},
 			local: {
 				options: {
@@ -248,7 +251,7 @@ module.exports = function (grunt) {
 		grunt.log.writeln('To abandon a ship, simply do nothing.');
 	});
 
-	grunt.registerTask('build', ['copy:assets', 'verb', 'assemble', 'copy:apps', 'less', 'copy:ghpages']);
+	grunt.registerTask('build', ['copy:assets', 'verb', 'assemble', 'less', 'copy:apps', 'copy:ghpages']);
 
 	// Build everything and watch for changes. You must first run "bower install"
 	// or install Bootstrap to the "vendor" directory before running this command.
@@ -258,6 +261,6 @@ module.exports = function (grunt) {
 
 	grunt.registerTask('deploy', ['buildcontrol:local']);
 	grunt.registerTask('integrate', ['gitcheckout:src', 'gitfetch:upstream', 'gitmerge:upstream', 'default', 'gitpush:origin']);
-	grunt.registerTask('ship-prep', ['gitcheckout:src', 'gitfetch:upstream', 'gitmerge:upstream', 'default', 'confirm_ship']);
-	grunt.registerTask('ship-go', ['sync', 'default', 'gitadd:version_bump', 'gitcommit:version_bump', 'gitpush:upstream', 'gitpush:origin', 'buildcontrol:live']);
+	grunt.registerTask('ship-prep', ['gitcheckout:src', 'gitfetch:upstream', 'gitmerge:upstream', 'default', 'copy:production_only', 'confirm_ship']);
+	grunt.registerTask('ship-go', ['sync', 'default', 'copy:production_only', 'gitadd:version_bump', 'gitcommit:version_bump', 'gitpush:upstream', 'gitpush:origin', 'buildcontrol:live']);
 };
