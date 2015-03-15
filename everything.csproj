@@ -50,8 +50,8 @@
 		<None Include="bower.json" />
 		<None Include="LICENSE-MIT" />
 		<None Include="package.json" />
-		<None Include="static\.gitignore" />
-		<None Include="static\.nojekyll" />
+		<None Include="static\**\*.*" />
+		<None Include="static_production_only\**\*.*" />
 		<None Include="apps\**\*.*" />
 		<None Include="content\**\*.*" />
 		<None Include="data\**\*.*" />
