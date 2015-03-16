@@ -2,28 +2,28 @@
 	"name": "RawTemplate",
 	"description": "Your tagline",
 	"version": "0.1.1",
-	"homepage": "http://example.com/",
-	"contrib_root": "https://github.com/Product/Product.github.io",
+	"homepage": "http://www.arlobelshee.com/",
+	"contrib_root": "https://github.com/arlobelshee/arlobelshee.github.io",
 	"author": {
 		"name": "Arlo Belshee",
 		"url": "https://github.com/arlobelshee"
 	},
 	"repository": {
 		"type": "git",
-		"url": "https://github.com/Product/Product.github.io.git",
-		"slug": "Product.github.io"
+		"url": "https://github.com/arlobelshee/arlobelshee.github.io.git",
+		"slug": "arlobelshee.github.io"
 	},
 	"bugs": {
-		"url": "https://github.com/Product/Product.github.io/issues"
+		"url": "https://github.com/arlobelshee/arlobelshee.github.io/issues"
 	},
 	"licenses": [
 		{
 			"type": "MIT",
-			"url": "https://github.com/Product/Product.github.io/blob/master/LICENSE-MIT"
+			"url": "https://github.com/arlobelshee/arlobelshee.github.io/blob/master/LICENSE-MIT"
 		},
 		{
-			"type": "CC BY 3.0",
-			"url": "http://creativecommons.org/licenses/by/3.0/"
+			"type": "CC BY 4.0",
+			"url": "http://creativecommons.org/licenses/by/4.0/"
 		}
 	],
 	"main": "Gruntfile.js",

@@ -37,8 +37,8 @@ components:       <%= site.theme %>/components
 # =============================================
 
 # GitHub
-username:         Product
-name:             Product.github.io
+username:         arlobelshee
+name:             arlobelshee.github.io
 download:
   source:         <%= pkg.contrib_root %>/archive/master.zip
 
@@ -47,8 +47,8 @@ download:
 # Site metadata
 # =============================================
 
-brand:            Your brand
-title:            Your title
+brand:            Arlo Being Bloody Stupid
+title:            Arlo Being Bloody Stupid
 lead:             <%= pkg.description %>
 
 version:          <%= pkg.version %>
